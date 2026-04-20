@@ -4,6 +4,10 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: jalan_jakarta
+
     steps:
       - uses: actions/checkout@v3
 
@@ -26,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: JalanJakarta-APK
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          path: jalan_jakarta/build/app/outputs/flutter-apk/app-debug.apk
